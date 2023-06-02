@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* 
+    em HTML é id    = em CSS é #  =>  identifica único elemento
+    em HTML é class = em CSS é .  =>  agrupa múltiplos elementos*
+    * um elemento pode ter mais de uma classe (separá-las po espaço)
+
+    id > class (configurações abaixo no css herdam as configurações gerais acima. E configurações de id sobrepõe configurações de classe)
+*/
+
+body {
+    background-color: rgb(209, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+    color: rgb(2, 82, 82);
+}
+
+section {
+    background-color: #ffffffdc;
+    box-shadow: 2px 2px 6px rgba(170, 170, 170, 0.466);
+}
+
+#principal /* ou h1#principal */ {
+    text-align: center;
+    background-color: rgb(2, 82, 82);
+    color: white;
+}
+
+h2 {
+    color: rgb(49, 136, 136);
+}
+
+.basico {
+    color: rgb(49, 136, 136);
+    font-weight: bold
+}
+
+.intermediario {
+    color: rgb(134, 136, 49);
+}
+
+.avancado {
+    color: rgb(136, 49, 49);
+}
+
+.destaque {
+    background-color: rgba(255, 255, 46, 0.37);
+}
+
+section > h1:hover {
+    text-decoration: underline;
+}
+
+footer {
+    color: #6d6d6d;
+    text-align: center;
+    font-style: italic;
+}

@@ -1,0 +1,16 @@
+.body-pagina-principal {
+    background-color: #cfcfcf;
+    font: normal 16px Arial;
+}
+
+.body-pagina-verde {
+    background-color: #95d39a;
+    font: normal 16px Arial;
+    color: #3f7544;
+}
+
+.body-pagina-amarela {
+    background-color: #d3c895;
+    font: normal 16px Arial;
+    color: #75683f;
+}

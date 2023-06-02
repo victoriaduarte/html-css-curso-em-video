@@ -1,0 +1,22 @@
+body {
+    background-color: #272727;
+    color: #ffffff;
+    font: normal 16px Arial;
+    text-align: center;
+}
+
+.playlist {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.playlist:hover {
+    font-weight: 600;
+}
+
+.thumbs {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
