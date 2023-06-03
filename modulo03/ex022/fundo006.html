@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Imagem de Fundo</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: black;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            /* background-size: contain;  Imagem é 100% exibida -> ao variar o tamanho da vh a imagem é distorcida*/
+            background-size: cover;  /* Não exibe 100% da imagem (corta a imagem), mas adapta o tamanho para ocupar/cobrir/preencher 100% da viewport (janela) -> ao variar o tamanho da vh a imagem é adaptada sem distorções */
+        }
+
+        main {
+            background-color: white;
+            width: 400px;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid darkgray;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Teste de Imagem de Fundo</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus perspiciatis labore cumque ea pariatur non sequi dicta inventore fugiat illum quas voluptate cupiditate excepturi vel id tempore repudiandae odit aperiam fuga culpa beatae, itaque unde nesciunt? Mollitia facilis adipisci, atque molestiae esse laudantium ipsa, repudiandae ducimus et dicta qui exercitationem ad eum! Iusto laboriosam excepturi, voluptatum aut repudiandae maiores, omnis eaque nemo harum, qui voluptatem porro possimus assumenda molestiae odio consequuntur? Tenetur, doloribus autem facilis, accusamus impedit, possimus ipsum numquam alias nemo ea velit error deleniti earum! Perferendis fugit nostrum sapiente molestias, aliquam corrupti praesentium, laudantium corporis, hic quisquam eveniet vitae itaque ullam. Voluptate, dolorum dolore. Nostrum, dolores! Aperiam non voluptatibus rerum nesciunt sequi laborum earum porro natus dolore quos unde laboriosam, quae odit ipsam corporis tenetur fugiat dolorum soluta? Accusamus ratione ab tempore accusantium hic facere, cumque esse incidunt aut dignissimos modi quos perspiciatis aliquam quod sunt iste exercitationem?</p>
+    </main>
+</body>
+
+</html>
