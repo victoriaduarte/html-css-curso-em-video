@@ -29,6 +29,16 @@ header p {
     color: #fff;
 }
 
+header a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff; 
+}
+
+header p > a:hover {
+    text-decoration: underline;
+}
+
 section p {
     font-family: 'Sriracha', cursive;
     font-size: 3.5vw;
