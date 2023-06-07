@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 8px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        /* ESTILIZAR COLUNAS COM COLGROUP -> SEMÂNTICO*/
+        /* col.colgrupo {
+            background-color: lime;
+        } */
+
+        /* ESTILIZAR COLUNAS COM :NTH-CHILD -> FLEXÍVEL */
+        tr > th:nth-child(1),td:nth-child(1) {
+            background-color: rgb(66, 66, 66);
+            color: white;
+            text-align: center;
+        }
+
+        .destaque {
+            background-color: lime;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício de Tabela</h1>
+
+    <table>
+        <!-- 
+            Estilizar as colunas 
+            
+            1) colgroup
+
+            LIMITAÇÕES:
+            Apenas 4 tipos de propriedades CSS podem ser aplicadas a colgroup/col:
+            - Border
+            - Background
+            - Width
+            - Visibility
+
+            2) :nth-child(n)
+            tr > td:nth-child(2) {
+                text-align: center;
+            }
+         -->
+        <colgroup>
+            <col class="colnome">
+            <col class="colgrupo" span="2">
+            <col class="colprof">
+        </colgroup>
+
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Cláudio</td>
+            <td>M</td>
+            <td>55</td>
+            <td>Autônomo</td>
+        </tr>
+        <tr class="destaque">
+            <td>Victória</td>
+            <td>F</td>
+            <td>26</td>
+            <td>Desenvolvedora</td>
+        </tr>
+        <tr>
+            <td>Nivaldo</td>
+            <td>M</td>
+            <td>62</td>
+            <td>Aposentado</td>
+        </tr>
+    </table>
+</body>
+</html>

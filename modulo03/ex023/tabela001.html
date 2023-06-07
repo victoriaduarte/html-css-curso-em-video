@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 400px;
+            height: 400px;
+            /* 
+            separate (deafult) = mantém o espaço entre as bordas internas da tabela
+            collapse = remove o espaço entre as bordas internas da tabela (junta as bordas)
+            */
+            border-collapse: collapse;  
+            /* border: 3px dashed black; */
+        }
+
+        tr.linha {
+            background-color: grey;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;  /* alinhamento horizontal (left, center, right)) */
+            vertical-align: bot;  /* alinhamento vertical (top, middle, bottom) */
+        }
+
+        td.dado {
+            background-color: yellow;
+        }
+
+        .numero {
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Minha primeira tabela</h1>
+    <!-- 
+        HIERARQUIA DE TABELAS (simples)
+        TABLE = tabela
+            TABLE ROW* = linha de tabela
+                TABLE HEADER = cabeçalho de tabela (título da coluna)
+                    TABLE DATA* = dado de tabela (célula)
+     -->
+    <table> 
+
+        <!-- SHORTHAND: tr*4>td*3 -->
+
+        <tr> <!-- Primeira linha -->
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr class="linha">  <!-- Segunda linha -->
+            <td>A2</td>
+            <td>B2</td>
+            <td class="numero">C2</td>
+        </tr>
+        <tr>  <!-- Terceira linha -->
+            <td>A3</td>
+            <td>B3</td>
+            <td class="numero">C3</td>
+        </tr>
+        <tr class="linha">  <!-- Quarta linha -->
+            <td>A4</td>
+            <td class="dado">B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+</body>
+</html>

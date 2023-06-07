@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            /* Fixar o cabeçalho no topo da tela (não sumir com scroll) --> não está funcionando perfeitamente em todos os navegadores */
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead, tfoot {
+            background-color: #383838;
+            color: white;
+        }
+
+        /* Fixar o cabeçalho no topo da tela (não sumir com scroll) --> não está funcionando perfeitamente em todos os navegadores */
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        td.num {
+            text-align: right;
+        }
+
+        /* 
+        EFEITO ZEBRADO NAS LINHAS
+
+        Usar a pseudo-classe	:nth-child( )
+
+        - Para linhas pares usar (even) ou (2n)
+        - Para linhas ímpares usar (odd) ou (2n-1)
+    
+        * Também é possível variar o intervalo (2n, 3n, 4n, ...)
+        */
+        tbody tr:nth-child(even) { /* 2n */
+            background-color: lightgray;
+        }
+
+        tbody tr:nth-child(odd) { /* 2n-1 */
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!-- 
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION (legenda/título da tabela)
+            THEAD
+                TR, TD (dado), TH (título)
+            TBODY*
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+     -->
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <!-- 
+                    SCOPE
+                    col = título da coluna (os dados estão na mesma coluna do título)
+                    row = título da linha (os dados estão na mesma linha do título)
+                 -->
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+        <tfoot> <!-- devido a semântica, o tfoot pode vir aqui ou após o tbody -->
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>210.147.125</strong></td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">46.649.132</td>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.411.923</td>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.463.349</td>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.985.284</td>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.597.484</td>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.466.630</td>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9.674.793</td>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9.240.580</td>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8.777.124</td>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7.338.473</td>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7.206.589</td>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">7.153.262</td>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">4.269.995</td>
+            <tr>
+                <td>Espirito Santo</td>
+                <td class="num">4.108.508</td>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4.059.905</td>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3.567.234</td>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3.560.903</td>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3.365.351</td>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3.289.290</td>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">3.094.325</td>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2.839.188</td>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.338.474</td>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1.815.278</td>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1.607.363</td>
+            <tr>
+                <td>Acre</td>
+                <td class="num">906.876</td>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">877.613</td>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">652.713</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores accusamus vero ipsum nobis, veniam quidem molestias in blanditiis enim atque molestiae! Est non, corporis enim amet error nam culpa neque omnis aperiam velit voluptate ea ipsa autem. Facere quo fugit excepturi? Iusto praesentium, doloremque omnis repellendus animi itaque velit quas suscipit labore repudiandae impedit neque exercitationem, non ipsam, dignissimos earum officiis facere illum ipsa ex natus. Possimus veritatis quos mollitia quam sed voluptate voluptatem dolores ducimus quaerat neque ipsa eos hic reprehenderit a perspiciatis sunt tempore similique ipsum, itaque error vitae aspernatur! Culpa repellat id doloremque provident ea neque dolores nemo necessitatibus laborum ullam quae nam vitae inventore eum at voluptas maiores labore numquam expedita, consequuntur architecto placeat veniam! Accusamus ut deserunt eius molestias nulla labore doloribus. Temporibus consequatur velit enim cumque labore sit praesentium consectetur vel a non voluptatibus animi similique quidem deleniti modi mollitia officiis ea nesciunt maiores, fuga distinctio ut! Voluptates dolorem molestias amet officia nulla nemo quia suscipit. Unde modi repellendus, nemo odio adipisci ipsum cumque eum recusandae quis reprehenderit voluptatem. Recusandae excepturi, consequatur error et deserunt quidem animi eum placeat, pariatur saepe nam quis ab reiciendis laudantium sit dolores alias, veritatis provident ea illo in optio asperiores? Tempora et facilis voluptatibus molestias neque odit dolores voluptatem. Enim expedita ea quia pariatur quisquam odit, eos corrupti, esse consequatur nihil accusamus aspernatur officiis, vero natus aperiam molestias asperiores rerum tempore sunt? At consectetur in laborum dolore sed, modi cumque! Dolor expedita in, ducimus atque quam rem! Libero distinctio quis magni debitis voluptatibus fugiat autem illum amet voluptas at vero natus, corrupti impedit facere obcaecati quod! Quibusdam totam rerum in! Tempore iure error, aut deleniti ducimus hic id distinctio ullam nisi? A nobis debitis repellendus fugit, cum quos? Quis ab quod, perspiciatis distinctio nobis recusandae neque cumque.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis accusamus libero quasi error ut! Ab alias animi, aperiam pariatur saepe enim, beatae minus dicta cum laudantium fugit, non asperiores illum quo consectetur. Quas possimus vitae minus! Unde dolor nam blanditiis libero placeat aliquam accusantium, voluptatum quis voluptate fugiat aut repudiandae, eligendi eveniet suscipit molestiae beatae provident incidunt et fugit voluptas consectetur reprehenderit ea odit? Aut eaque dolore id deleniti libero, assumenda adipisci reiciendis tenetur illum atque nihil natus unde provident. Incidunt quisquam, quia, asperiores cum repudiandae temporibus accusantium odio modi, voluptatibus similique a voluptate illum harum non saepe vel! Nihil laboriosam dolorem necessitatibus recusandae enim consequuntur! Quod, incidunt repudiandae voluptas excepturi dolorem provident culpa optio recusandae numquam sunt beatae. Qui praesentium deserunt at doloremque dolore officia, nisi deleniti possimus rem ipsum voluptates, dolor quis modi pariatur voluptatem sapiente vel cumque exercitationem recusandae magni quae? Minus dolorum culpa minima natus odit pariatur nihil voluptates repudiandae, velit praesentium reprehenderit enim doloremque! Laboriosam deleniti culpa velit accusantium? Laborum nostrum voluptatibus, laboriosam odio maxime nihil cum ullam repellendus, natus, et illo! Laborum tempore possimus, commodi adipisci nemo ad amet distinctio maxime quas hic neque a id atque reiciendis eligendi voluptatum, facere accusamus molestiae iste, placeat perspiciatis eius ex assumenda ut. Consequuntur quas ratione optio vel vero accusantium similique minus velit est excepturi fuga rem sed, sint maiores consectetur, cum voluptate molestias! Atque omnis quis cum possimus harum accusantium necessitatibus dignissimos aliquam! Ipsa incidunt error voluptatum molestiae veniam eaque adipisci vitae quis neque explicabo? Ratione deserunt fugiat in laudantium quaerat corporis? Magnam perferendis porro quam amet impedit odit enim ut distinctio reiciendis nisi, dolores tempore vero dicta, sit fuga veritatis aliquid fugiat voluptate eligendi possimus! Labore cupiditate molestias fugit, eveniet accusamus, libero possimus, odit id iste fugiat quia assumenda voluptates illo velit repellendus mollitia quo.</p>
+</body>
+
+</html>

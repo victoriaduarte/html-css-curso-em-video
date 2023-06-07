@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        div > table {
+            margin: auto;
+        }
+
+        table {
+            width: 600px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            padding: 5px;
+            background-color: black;
+            color: white;
+            border-top: 1px;
+            border-left: 1px;
+            border-right: 1px;
+            border-bottom: 0px;
+            border-style: solid;
+            border-color: black;
+        }
+
+        thead {
+            background-color: gray;
+            border: 1px solid black;
+        }
+
+        thead > tr > th {
+            /* cabeçalho fixado no topo da página */
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        td, th {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        p {
+            margin: 30px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercício de Tabelas</h1>
+    <div>
+        <table>
+            <caption>
+                Filmes Favoritos
+            </caption>
+            <thead>
+                <tr>
+                    <th scope="col">Grupo</th>
+                    <th scope="col">Nomes</th>
+                    <th scope="colgroup" colspan="3">Filmes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">Mulheres</th>
+                    <td>Ana Maria Santos</td>
+                    <td>Alien</td>
+                    <td>Rambo</td>
+                    <td>Vingadores</td>
+                </tr>
+                <tr>
+                    <td>Beatriz Souza</td>
+                    <td>Hulk</td>
+                    <td>Inception</td>
+                    <td>Batman</td>
+                </tr>
+                <tr>
+                    <td>Cláudia Melo</td>
+                    <td>Oblivion</td>
+                    <td>Matrix</td>
+                    <td>Bighero</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">Homens</th>
+                    <td>Bruno Mendonça</td>
+                    <td>Intocáveis</td>
+                    <td>Amnésia</td>
+                    <td>Gladiador</td>
+                </tr>
+                <tr>
+                    <td>Daniel Lourenço</td>
+                    <td>Wall-E</td>
+                    <td>Oldboy</td>
+                    <td>Dangal</td>
+                </tr>
+                <tr>
+                    <td>Fabiano Mota</td>
+                    <td>Star Wars 5</td>
+                    <td>Taxi Driver</td>
+                    <td>Toy Story</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <!-- O dado relativo à th é apenas uma célula, não um grupo de células. Logo, o scope é row, e não rowgroup -->
+                    <th scope="row" colspan="4">Total</th>
+                    <td>1000</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, porro deleniti? Eum enim atque fuga doloremque, obcaecati natus ab repudiandae. Aspernatur corporis cupiditate, quae expedita dolorem aliquam reprehenderit magnam, quaerat iste vel molestiae eaque fugit id est? Praesentium neque eos recusandae? Explicabo hic reiciendis deleniti illum sequi, maxime quaerat soluta culpa repellat impedit exercitationem non excepturi assumenda eaque eveniet! Iure tempora eos molestias nam iste deleniti aliquam cum exercitationem dolorum odit, voluptates sequi excepturi sit doloremque est quos fugiat! Quae ea doloribus in perferendis nemo dolore voluptatem consectetur temporibus, distinctio beatae minus totam optio eum. Quod voluptatibus provident ad natus!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim ab debitis ullam sequi totam harum autem doloribus libero quis, rerum, est, ducimus ad quia. Temporibus dolore dolorem sequi placeat consequuntur error consequatur quasi sint ratione natus dignissimos facere sapiente perspiciatis ipsum totam minima tempore optio, delectus nemo corrupti. Iure quaerat deserunt minus tempore assumenda impedit id nisi autem eius!</p>
+    </div>
+</body>
+</html>
