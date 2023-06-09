@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            width: 95vh;
+            height: 700px;
+            border: 2px solid black;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Faça um escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam doloremque dolorem nihil corporis quod repellendus a voluptatibus, ea fugit, voluptate molestias doloribus ab eos cupiditate iste, odit nobis placeat laborum? Expedita voluptate magni sapiente inventore natus autem accusantium unde fugiat earum? Dolores molestiae adipisci optio saepe ipsa cum nihil autem.</p>
+
+    <ul>
+        <li><a href="paginas-extras/pagina001.html" target="frame">Primeira página</a></li>
+        <li><a href="paginas-extras/pagina002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extras/pagina003.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum velit temporibus id veritatis nulla dolor, recusandae ab neque, incidunt molestias tenetur modi ipsa. Omnis ad, iste aspernatur praesentium tempore itaque! Saepe, distinctio odio iure commodi dolorem deserunt at ullam tempora inventore dolorum perferendis culpa voluptatem, amet laboriosam. Facere aliquid obcaecati iusto ratione illum, dignissimos suscipit deserunt ipsum voluptate dolorem nihil.</p>
+
+    <!-- criar atributo "name" para referenciar nos links acima, assim a página será aberta dentro do iframe -->
+    <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1>">
+        <p>Infelizmente seu navegador não é compatível com esse recurso.</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam ratione facere ea recusandae? Debitis, minus ratione! Libero voluptates quam atque totam, delectus odio sapiente suscipit reiciendis! Aspernatur, incidunt cumque.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cupiditate optio magnam. Neque magnam excepturi at labore quisquam nisi mollitia tempora voluptatum quos perspiciatis culpa sint animi iste eveniet, unde earum ullam quod. Debitis, consectetur quae qui ducimus blanditiis similique!</p>
+</body>
+
+</html>
