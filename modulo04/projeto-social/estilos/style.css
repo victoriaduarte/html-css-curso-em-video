@@ -37,35 +37,10 @@ section#telefone {
     background-image: url('../imagens/frame-iphone.png');
 }
 
-
-
-
-
-
-
-
-main img {
-    margin: auto;
+iframe#tela{
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 268px;
+    height: 471px;
 }
-
-ul {
-    list-style: none;
-    /* text-align: right; */
-}
-
-li {
-    padding: 8px;
-}
-
-ul img:hover {
-    border: 1px solid rgba(255, 255, 255, 0.63);
-    border-radius: 50%;
-    transition: 1s;
-    transform: translate(-2px, -2px);
-}
-
-ul img {
-    border-radius: 50%;
-    width: 50px;
-}
-
