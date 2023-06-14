@@ -4,117 +4,137 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
-body {
+body, html {
     background-color: #5F2C82;
+    height: 100vh;
+    width: 100vw;
 }
 
 main {
-    background-color: white;
-    width: 50vw;
-    border-radius: 20px;
-    /* centraliza */
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-}
+    overflow: hidden;  /* tudo que estiver fora da borda ficará escondido */
 
-section#background {
-    height: 200px;
-    background-image: url('../imagens/metal.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-/* TEXTO */
-
-main > section#login > h1 {
-    text-align: center;
-    font-size: 1.5em;
-    padding: 10px;
-}
-
-main > section#login > p {
-    font-size: .8em;
-    padding: 0px 10px;
-}
-
-/* FORM - LOGIN */
-
-main > section#login > form {
-    text-align: center;
-}
-
-main > section#login > form > p input {
-    margin: 1px;
-    font-size: 1em;
-}
-
-form > p.campo-login {
-    background-color: #5F2C82;
-    border-radius:8px;
-    margin: 4px auto;
-    width: 230px;
-    display: flex;
-    justify-content: center;
-}
-
-form > p.campo-login input {
-    padding: 6px;
-    border-radius: 8px;
-    background-color: #94CFCD;
-}
-
-form > p.campo-submit {
-    margin: 4px;
-}
-
-form > p.campo-submit input {
-    padding: 10px;
-}
-
-span {
-    color: white;
-}
-
-.material-icons {
-    width: 20px;
-    font-size: 1.8em;
-}
-
-/* FORM - SUBMIT */
-
-p#campo-esqueci-senha {
-    margin-bottom: 30px;
-}
-
-input#entrar {
-    background-color: #53AAA7;
-    border: none;
-    border-radius:5px;
-    color: white;
-    width: 230px;
-}
-
-input#entrar:hover {
-    background-color: #2D6462;
-    cursor: pointer;
-}
-
-input#esqueci-senha {
     background-color: white;
-    border: 1px solid #53AAA7;
-    border-radius:5px;
-    color: #2D6462;
-    width: 230px;
+    width: 250px;
+    height: 515px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+
+    /* colocar transforms e transitions no final do seletor */
+    transition: width .3s, height .3s;  
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
+
 }
 
-input#esqueci-senha:hover {
-    background-color: #6CD3CF;
+section#login > div#imagem {
+    display: block;  /*  */
+    background: #5F2C82 url(../imagens/metal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    height: 200px;
+}
+
+section#login > div#formulario {
+    display: block;  /*  */
+    padding: 10px;
+}
+
+div#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p {
+    font-size: 0.8em;
+}
+
+/* CAMPOS */
+
+div.campo {
+    background-color: #5F2C82;
+    border-radius: 8px;
+    margin: 4px 0px;
+    height: 40px;
+    border: 2px solid #5F2C82;
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo .material-icons {
+    color: white;
+    font-size: 1.8em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    border-radius: 8px;
+    padding: 6px;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 5px;
+    padding: 4px;
+    transform: translateY(-8px);  /* colocar transform e transition no final do seletor */
+}
+
+div.campo input:focus-within {
+    background-color: white;
+}
+
+/* BOTÕES */
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: #2d6462;
+}
+
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    color: #2d6462;
+    border: 1px solid #49a09d;
+    border-radius: 5px;
+    text-decoration: none;
+    padding-top: 7px;
+    margin-top: 4px;
+}
+
+form > a.botao:hover {
+    background-color: #6cd3cf;
+}
+
+form > a.botao > span {
+    font-size: 0.8em;
 }
