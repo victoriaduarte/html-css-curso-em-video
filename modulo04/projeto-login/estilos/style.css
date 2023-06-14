@@ -90,9 +90,9 @@ div.campo input {
     width: calc(100% - 45px);
     height: 100%;
     border: 0px;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 4px;
-    transform: translateY(-8px);  /* colocar transform e transition no final do seletor */
+    transform: translateY(-9px);  /* colocar transform e transition no final do seletor */
 }
 
 div.campo input:focus-within {
