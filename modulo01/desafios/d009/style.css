@@ -6,17 +6,49 @@ body {
 }
 
 .playlist {
+    margin-bottom: 3em;
+}
+
+
+.playlist-link {
     text-decoration: none;
     color: #ffffff;
+    line-height: 20px;
 }
 
-.playlist:hover {
-    font-weight: 600;
+.playlist-link:hover {
+    font-size: 17.5px;
+    transition: transform 3s ease-out;
 }
 
-.thumbs {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.playlist-link::after {
+    content: ' ✨';
+}
+
+.playlist-link::before {
+    content: '✨ ';
+}
+
+.thumb {
+    max-width: 20%;
+}
+
+.thumb:hover {
+    transform: scale(1.05);
+    transition: transform .3s;
+}
+
+.voltar-desafios {
+    margin: 2em;
+}
+
+.voltar-desafios-link {
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+.voltar-desafios-link:hover {
+    font-size: 17.5px;
+    transition: transform 3s ease-out;
 }
