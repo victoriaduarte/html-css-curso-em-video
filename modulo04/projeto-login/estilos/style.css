@@ -160,3 +160,22 @@ form > a.botao > span {
     font-size: 17.5px;
     transition: transform 3s ease-out;
 }
+
+footer {
+    color: #5F2C82;
+    font-size: 0.8em;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:visited {
+    color: #5F2C82;
+}
