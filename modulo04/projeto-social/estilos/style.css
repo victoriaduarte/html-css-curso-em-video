@@ -63,3 +63,23 @@ section#redes-sociais img:hover {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
     transition: transform .3s/* , border .3s */;
 }
+
+.voltar-desafios {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 2em;
+}
+
+.voltar-desafios-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    line-height: 20px;
+}
+
+.voltar-desafios-link:hover {
+    font-size: 17.5px;
+    transition: transform 3s ease-out;
+}
