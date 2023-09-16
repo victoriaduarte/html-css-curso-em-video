@@ -83,3 +83,22 @@ section#redes-sociais img:hover {
     font-size: 17.5px;
     transition: transform 3s ease-out;
 }
+
+footer {
+    color: #f4f4f4;
+    font-size: 0.8em;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:visited {
+    color: #f4f4f4;
+}
