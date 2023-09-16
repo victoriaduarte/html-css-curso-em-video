@@ -139,3 +139,24 @@ form > a.botao:hover {
 form > a.botao > span {
     font-size: 0.8em;
 }
+
+.voltar-desafios {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 2em;
+}
+
+.voltar-desafios-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    line-height: 20px;
+}
+
+.voltar-desafios-link:hover {
+    font-size: 17.5px;
+    transition: transform 3s ease-out;
+}
